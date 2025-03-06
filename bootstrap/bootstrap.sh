@@ -19,11 +19,11 @@ MIMIRS3KEY=$(head -c 16 /dev/urandom | base64 | tr -dc 'a-zA-Z0-9')
 
 kubectl create secret generic admin-user \
     --from-literal=adminUser=admin \
-    --from-literal=adminPassword='$(PASSWORD)' \ 
+    --from-literal=adminPassword='$(PASSWORD)' \
     -n grafana-prod
 
 kubectl create secret generic mimir-bucket-secret \
-    --from-literal=MIMIRS3KEY='$(MIMIRS3KEY)' \ 
+    --from-literal=MIMIRS3KEY='$(MIMIRS3KEY)' \
     -n loki
 
 kubectl apply -f root-app.yaml
