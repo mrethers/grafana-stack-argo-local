@@ -10,7 +10,6 @@ fi
 
 find .. -type f -exec sed -i '' "s|https://github.com/mrethers/grafana-stack-argo-local.git|$REPO_URL|g" {} +
 
-git status
 git add ..
 git commit -m "Update repository URL to $REPO_URL"
 git push
