@@ -14,7 +14,7 @@ spec:
       helm:
         valueFiles:
           - $values/values/mimir-overrides-enterprise.yaml
-    - repoURL: https://github.com/pbmoses/grafana-stack-argo.git 
+    - repoURL: https://github.com/mrethers/grafana-stack-argo-local.git 
       targetRevision: HEAD 
       ref: values
   project: default
