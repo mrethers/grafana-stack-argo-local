@@ -11,9 +11,9 @@ fi
 find .. -type f -exec sed -i '' "s|https://github.com/mrethers/grafana-stack-argo-local.git|$REPO_URL|g" {} +
 
 git status
-# git add ..
-# git commit -m "Update repository URL to $REPO_URL"
-# git push
+git add ..
+git commit -m "Update repository URL to $REPO_URL"
+git push
 
 # PASSWORD=$(head -c 16 /dev/urandom | base64 | tr -dc 'a-zA-Z0-9')
 # MIMIRS3KEY=$(head -c 16 /dev/urandom | base64 | tr -dc 'a-zA-Z0-9')
